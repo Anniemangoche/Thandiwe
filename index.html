@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thandiwe Lodge — Mangochi, Lake Malawi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  body{ overflow:hidden; }
+  .splash{
+    height:100vh;
+    min-height:560px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:var(--text-light);
+    overflow:hidden;
+  }
+  .splash-img{
+    position:absolute; inset:0;
+    animation:splashZoom 9s ease-out forwards;
+  }
+  @keyframes splashZoom{
+    from{ transform:scale(1.1); }
+    to{ transform:scale(1); }
+  }
+  .splash::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(11,20,20,0.55) 0%, rgba(11,20,20,0.72) 100%);
+  }
+  .splash-content{
+    position:relative; z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    opacity:0;
+    animation:splashIn 1.2s ease .3s forwards;
+  }
+  @keyframes splashIn{
+    from{ opacity:0; transform:translateY(14px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  .splash-kicker{
+    font-size:0.9rem;
+    letter-spacing:0.03em;
+    color:var(--sand);
+    margin-bottom:22px;
+  }
+  .splash-word{
+    font-family:'Fraunces', serif;
+    font-size:clamp(2.8rem, 8vw, 5.5rem);
+    line-height:1;
+    font-weight:500;
+  }
+  .splash-word em{ font-style:italic; color:var(--sand); font-weight:400; }
+  .splash-sub{
+    margin-top:20px;
+    font-size:1.05rem;
+    max-width:420px;
+    color:rgba(243,236,221,0.82);
+  }
+  .splash-enter{
+    margin-top:44px;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    border:1px solid var(--text-light);
+    padding:15px 34px;
+    border-radius:2px;
+    font-size:0.95rem;
+  }
+  .splash-enter:hover{ background:rgba(243,236,221,0.08); }
+</style>
+</head>
+<body>
+
+  <section class="splash">
+    <div class="splash-img"><img src="images/hero-sunset.jpg" alt="Sunset over Lake Malawi at Thandiwe Lodge"></div>
+    <div class="splash-content">
+      <span class="splash-kicker">Mangochi &middot; Lake Malawi</span>
+      <div class="splash-word">Thandiwe <em>Lodge</em></div>
+      <p class="splash-sub">Thatched cottages, a lakeside plunge pool, and a bar built into an old canoe under the mango tree.</p>
+      <a class="splash-enter" href="home.html">Get started</a>
+    </div>
+  </section>
+
+</body>
+</html>
